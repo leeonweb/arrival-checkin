@@ -1,0 +1,226 @@
+{
+  "students": {
+    "S001": {
+      "code": "S001",
+      "name": "Sample Student 1",
+      "parent_code": "P4821",
+      "created_at": "2026-10-12T23:28:08.319Z"
+    },
+    "S002": {
+      "code": "S002",
+      "name": "Sample Student 2",
+      "parent_code": "P7390",
+      "created_at": "2026-10-12T23:28:08.319Z"
+    },
+    "S003": {
+      "code": "S003",
+      "name": "Sample Student 3",
+      "parent_code": "P4821",
+      "created_at": "2026-10-12T23:28:08.319Z"
+    },
+    "SF742": {
+      "code": "SF742",
+      "name": "Maria Rapahela Sibug",
+      "parent_code": "P39DC",
+      "created_at": "2026-10-13T05:02:18.699Z"
+    },
+    "SGL55": {
+      "code": "SGL55",
+      "name": "Maria Angela Sibug",
+      "parent_code": "P39DC",
+      "created_at": "2026-10-13T05:03:06.207Z"
+    }
+  },
+  "parents": {
+    "P4821": {
+      "code": "P4821",
+      "name": "Santos Family",
+      "contact": "0917-555-0199",
+      "created_at": "2026-10-12T23:28:08.319Z"
+    },
+    "P7390": {
+      "code": "P7390",
+      "name": "Reyes Family",
+      "contact": "0918-555-0288",
+      "created_at": "2026-10-12T23:28:08.319Z"
+    },
+    "P39DC": {
+      "code": "P39DC",
+      "name": "Sibug Family",
+      "contact": "0919-659-2273",
+      "created_at": "2026-10-13T05:00:23.374Z"
+    }
+  },
+  "staff": {
+    "T4829": {
+      "code": "T4829",
+      "name": "Maria Santos (Principal)",
+      "status": "active",
+      "created_at": "2026-10-13T07:26:36.850Z"
+    },
+    "T7311": {
+      "code": "T7311",
+      "name": "Juan Dela Cruz (Teacher)",
+      "status": "active",
+      "created_at": "2026-10-13T07:26:36.850Z"
+    }
+  },
+  "attendance": {
+    "2026-10-13_SF742": {
+      "id": "2026-10-13_SF742",
+      "date": "2026-10-13",
+      "student_code": "SF742",
+      "student_name": "Maria Rapahela Sibug",
+      "parent_code": "P39DC",
+      "check_in": "1:15 PM",
+      "check_in_raw": "2026-10-13T05:15:40.616Z",
+      "check_in_message": "Dito na.",
+      "check_in_device": "Class1",
+      "check_in_device_id": "dev_cb4482d28cd8c7d1",
+      "no_check_in_recorded": false
+    },
+    "2026-10-13_SGL55": {
+      "id": "2026-10-13_SGL55",
+      "date": "2026-10-13",
+      "student_code": "SGL55",
+      "student_name": "Maria Angela Sibug",
+      "parent_code": "P39DC",
+      "check_in": "1:17 PM",
+      "check_in_raw": "2026-10-13T05:17:06.197Z",
+      "check_in_device": "Class1",
+      "check_in_device_id": "dev_cb4482d28cd8c7d1",
+      "check_out": "2:01 PM",
+      "check_out_raw": "2026-10-13T06:01:56.377Z",
+      "check_out_device": "Class1",
+      "check_out_device_id": "dev_cb4482d28cd8c7d1",
+      "no_check_in_recorded": false
+    },
+    "2026-10-13_S001": {
+      "id": "2026-10-13_S001",
+      "date": "2026-10-13",
+      "code": "S001",
+      "name": "Sample Student 1",
+      "student_code": "S001",
+      "student_name": "Sample Student 1",
+      "parent_code": "P4821",
+      "is_staff": false,
+      "afternoon_check_in": "3:27 PM",
+      "afternoon_check_in_raw": "2026-10-13T07:27:36.441Z",
+      "afternoon_check_in_message": "Test afternoon message",
+      "afternoon_check_in_device": "North Gate Kiosk",
+      "afternoon_check_in_device_id": "dev_935c7c483299eed7",
+      "afternoon_no_check_in_recorded": false,
+      "check_in": "3:27 PM",
+      "afternoon_check_out": "3:27 PM",
+      "afternoon_check_out_raw": "2026-10-13T07:27:48.252Z",
+      "afternoon_check_out_message": "Going home with dad",
+      "afternoon_check_out_device": "North Gate Kiosk",
+      "afternoon_check_out_device_id": "dev_935c7c483299eed7",
+      "check_out": "3:27 PM"
+    },
+    "2026-10-13_T4829": {
+      "id": "2026-10-13_T4829",
+      "date": "2026-10-13",
+      "code": "T4829",
+      "name": "Maria Santos (Principal)",
+      "student_code": "T4829",
+      "student_name": "Maria Santos (Principal)",
+      "parent_code": "",
+      "is_staff": true,
+      "afternoon_check_in": "3:27 PM",
+      "afternoon_check_in_raw": "2026-10-13T07:27:36.449Z",
+      "afternoon_check_in_device": "North Gate Kiosk",
+      "afternoon_check_in_device_id": "dev_935c7c483299eed7",
+      "afternoon_no_check_in_recorded": false,
+      "check_in": "3:27 PM"
+    },
+    "2026-10-13_S002": {
+      "id": "2026-10-13_S002",
+      "date": "2026-10-13",
+      "code": "S002",
+      "student_code": "S002",
+      "name": "Sample Student 2",
+      "student_name": "Sample Student 2",
+      "morning_check_in": "7:45 AM",
+      "parent_code": "",
+      "morning_check_out": "3:27 PM",
+      "morning_check_out_raw": "2026-10-13T07:27:48.233Z",
+      "morning_check_out_device": "North Gate Kiosk",
+      "morning_check_out_device_id": "dev_935c7c483299eed7",
+      "check_out": "3:27 PM"
+    }
+  },
+  "devices": {
+    "dev_712bae67285fa5e7": {
+      "id": "dev_712bae67285fa5e7",
+      "token": "d0051304d72a1c3f4e76397eefea19502d599b46b0419ec031ec3eb31065dbac",
+      "label": "Main Gate Tablet",
+      "description": "Chrome on Android",
+      "approved_at": "2026-10-13 8:09 AM",
+      "last_active_at": "2026-10-13 8:09 AM",
+      "status": "revoked",
+      "user_agent": "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/120.0 Mobile Safari/537.36"
+    },
+    "dev_cb4482d28cd8c7d1": {
+      "id": "dev_cb4482d28cd8c7d1",
+      "token": "517a0fddd2387cf331d0bb7eb9d71c1424fbd7d9c95a3029912436530453f049",
+      "label": "Class1",
+      "description": "Chrome on Android",
+      "approved_at": "2026-10-13 1:14 PM",
+      "last_active_at": "2026-10-13 2:02 PM",
+      "status": "active",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36"
+    },
+    "dev_935c7c483299eed7": {
+      "id": "dev_935c7c483299eed7",
+      "token": "127ed81fcff106292f4d8d773fed5aa1ab1ce2444fbf7041908d46000b13b33a",
+      "label": "North Gate Kiosk",
+      "description": "Chrome on Android",
+      "approved_at": "2026-10-13 3:27 PM",
+      "last_active_at": "2026-10-13 3:27 PM",
+      "status": "active",
+      "user_agent": "Mozilla/5.0 (Linux; Android 14) Chrome/120"
+    }
+  },
+  "licenses": {
+    "HT9BFW6": {
+      "code": "HT9BFW6",
+      "label": "Main Gate Tablet",
+      "created_at": "2026-10-13 8:09 AM",
+      "expires_at": 1791936552084,
+      "used": true,
+      "used_at": "2026-10-13 8:09 AM",
+      "used_device_id": "dev_712bae67285fa5e7"
+    },
+    "GATE2026": {
+      "code": "GATE2026",
+      "label": "Main Gate Tablet",
+      "created_at": "2026-10-13T00:10:00.654Z",
+      "expires_at": 1792455000654,
+      "used": false
+    },
+    "GFLSEXK": {
+      "code": "GFLSEXK",
+      "label": "Class1",
+      "created_at": "2026-10-13 1:13 PM",
+      "expires_at": 1791954821039,
+      "used": true,
+      "used_at": "2026-10-13 1:14 PM",
+      "used_device_id": "dev_cb4482d28cd8c7d1"
+    },
+    "SGLECFU": {
+      "code": "SGLECFU",
+      "label": "North Gate Kiosk",
+      "created_at": "2026-10-13 3:27 PM",
+      "used": true,
+      "used_at": "2026-10-13 3:27 PM",
+      "used_device_id": "dev_935c7c483299eed7"
+    }
+  },
+  "settings": {
+    "allow_messages": true,
+    "use_one_session": false,
+    "morning_cutoff": "11:01"
+  },
+  "attempts": []
+}

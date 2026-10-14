@@ -1,0 +1,8 @@
+{
+  "name": "Arrival Check-in",
+  "description": "Mobile-friendly school arrival and departure check-in system with server-authoritative privacy protection, parent status view, and staff admin dashboard.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

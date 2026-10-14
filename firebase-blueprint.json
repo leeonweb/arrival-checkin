@@ -1,0 +1,209 @@
+{
+  "entities": {
+    "student": {
+      "title": "Student",
+      "description": "Student roster record",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "parent_code": {
+          "type": "string",
+          "maxLength": 10
+        }
+      },
+      "required": ["code", "name", "parent_code"]
+    },
+    "parent": {
+      "title": "Parent",
+      "description": "Parent directory record",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "contact": {
+          "type": "string",
+          "maxLength": 50
+        }
+      },
+      "required": ["code"]
+    },
+    "staff": {
+      "title": "Staff",
+      "description": "Authorized school faculty/staff record for re-entry authorizations",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "revoked"]
+        }
+      },
+      "required": ["code", "name", "status"]
+    },
+    "session_attendance": {
+      "title": "SessionAttendance",
+      "description": "Attendance record for a student per date and session (AM, PM, or DAY)",
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "session": {
+          "type": "string",
+          "enum": ["AM", "PM", "DAY"]
+        },
+        "student_code": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "student_name": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "parent_code": {
+          "type": "string",
+          "maxLength": 10
+        }
+      },
+      "required": ["date", "session", "student_code", "student_name"]
+    },
+    "device": {
+      "title": "Device",
+      "description": "Approved station tablet or kiosk device without automatic expiry",
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 150
+        },
+        "approved_at": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "last_active_at": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "revoked"]
+        }
+      },
+      "required": ["token", "label", "status"]
+    },
+    "device_license": {
+      "title": "DeviceLicense",
+      "description": "One-time station activation license code with no timer",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "maxLength": 16
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "created_at": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "used": {
+          "type": "boolean"
+        }
+      },
+      "required": ["code", "label", "used"]
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Application settings including session cutoffs",
+      "type": "object",
+      "properties": {
+        "allow_messages": {
+          "type": "boolean"
+        },
+        "session_cutoff_time": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "one_session_per_day": {
+          "type": "boolean"
+        }
+      },
+      "required": ["allow_messages"]
+    }
+  },
+  "firestore": {
+    "/students/{studentCode}": {
+      "schema": {
+        "$ref": "#/entities/student"
+      },
+      "description": "Student roster records"
+    },
+    "/parents/{parentCode}": {
+      "schema": {
+        "$ref": "#/entities/parent"
+      },
+      "description": "Parent records"
+    },
+    "/staff/{staffCode}": {
+      "schema": {
+        "$ref": "#/entities/staff"
+      },
+      "description": "Staff authorization records"
+    },
+    "/session_attendance/{attendanceId}": {
+      "schema": {
+        "$ref": "#/entities/session_attendance"
+      },
+      "description": "Session attendance records (e.g. 2026-10-12_S001_AM)"
+    },
+    "/devices/{deviceId}": {
+      "schema": {
+        "$ref": "#/entities/device"
+      },
+      "description": "School head approved station devices"
+    },
+    "/device_licenses/{licenseCode}": {
+      "schema": {
+        "$ref": "#/entities/device_license"
+      },
+      "description": "Station activation license codes"
+    },
+    "/settings/{settingId}": {
+      "schema": {
+        "$ref": "#/entities/settings"
+      },
+      "description": "System settings"
+    }
+  }
+}

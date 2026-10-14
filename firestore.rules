@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Zero client trust: public pages never touch Firestore directly.
+    // All reads and writes are routed exclusively through the server-side backend layer.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
